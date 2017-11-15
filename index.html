@@ -129,6 +129,24 @@
         		updateStatus('failed to stop watching');
         	});
         }
+		function empfang() {
+        	SmsReceiver.startReception(({messageBody, originatingAddress}) => {
+  alert(messageBody)
+}, () => {
+  alert("Error while receiving messages")
+})
+        }
+		 function support() {
+        	SmsReceiver.isSupported((supported) => {
+  if (supported) {
+    alert("SMS supported!")
+  } else {
+    alert("SMS not supported")
+  }
+}), function() => {
+  alert("Error while checking the SMS support")
+})
+        }
         
         function toggleIntercept() {
         	interceptEnabled = ! interceptEnabled;
@@ -166,7 +184,8 @@
             <hr/>
 			
             <button onclick="updateStatus('');updateData('');smsList.length=0;">Clear</button><br/>
-            
+			<button onclick="support();">Support</button>
+            <button onclick="empfang();">Start Empfang</button>
             <div id='status'></div><hr/>
             <div id='data' style='text-align:left;'></div>
        </div>
