@@ -131,13 +131,18 @@
         	});
         }
 		function empfang() {
+			alert("Ok");
+			
 			 smsInboxPlugin.startReception (function(msg) {
     alert(msg);
+				 
   }, function() {
     alert("Error while receiving messages");
   });
         }
 		 function support() {
+			 
+			 alert(smsInboxPlugin);
 	  smsInboxPlugin.isSupported ((function(supported) {
     if(supported) 
       alert("SMS supported !");
