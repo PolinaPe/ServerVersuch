@@ -132,23 +132,21 @@
         }
 		
        function empfang() {
-		SmsReceiver.startReception(({messageBody, originatingAddress}) => {
-                alert(messageBody)
-                }, () => {
-               alert("Error while receiving messages")
-               });
+		smsInboxPlugin.startReception (function(msg) {
+    alert(msg);
+  }, function() {
+    alert("Error while receiving messages");
+  });
         }
      function support() {
-	     alert(SmsReceiver);	 
-             SmsReceiver.isSupported((supported) => {
-             if (supported) {
-              alert("SMS supported!")
-              } else {
-              alert("SMS not supported")
-              }
-       }, () => {
-         alert("Error while checking the SMS support")
-         });
+	     smsInboxPlugin.isSupported ((function(supported) {
+    if(supported) 
+      alert("SMS supported !");
+    else
+      alert("SMS not supported");
+  }), function() {
+    alert("Error while checking the SMS support");
+  });
         }
         
         function toggleIntercept() {
