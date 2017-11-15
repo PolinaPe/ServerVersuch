@@ -134,7 +134,7 @@
   alert(messageBody)
 }, () => {
   alert("Error while receiving messages")
-})
+});
         }
 		 function support() {
         	SmsReceiver.isSupported((supported) => {
@@ -145,7 +145,7 @@
   }
 }), function() => {
   alert("Error while checking the SMS support")
-})
+});
         }
         
         function toggleIntercept() {
