@@ -24,7 +24,7 @@ Beispiel Code</description>
  <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 	<gap:plugin name="cordova-plugin-sms" source="npm" />
-	<plugin spec="https://github.com/rehy/cordova-plugin-sms-receiver" source="git" />
+	<plugin spec="https://github.com/kant2002/Cordova-SMS-Reception-Plugin" source="git" />
 	
 
 
