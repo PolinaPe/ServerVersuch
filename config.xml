@@ -24,8 +24,8 @@ Beispiel Code</description>
  <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
 	<gap:plugin name="cordova-plugin-sms" source="npm" />
+	<plugin spec="https://github.com/Ivanezko/Phonegap-SMS" source="git" />
 	
-	<gap:plugin name="Phonegap-SMS"  source="npm" />
 
 
 
