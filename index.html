@@ -130,22 +130,23 @@
         	});
         }
 		function empfang() {
-        	SmsReceiver.startReception(({messageBody, originatingAddress}) => {
-  alert(messageBody)
-}, () => {
-  alert("Error while receiving messages")
-});
+        	 window.sms.startReceiving (function(msg) {
+      alert(msg); /* message received successfully */
+  }, function() {
+      alert("Error while receiving messages");
+  });
         }
 		 function support() {
-        	SmsReceiver.isSupported((supported) => {
-  if (supported) {
-    alert("SMS supported!")
-  } else {
-    alert("SMS not supported")
-  }
-}), function() => {
-  alert("Error while checking the SMS support")
-});
+        	 window.sms.isSupported ((function(supported) {
+        if(supported){
+             alert("you have permission to receive SMS ");             
+         } else {
+             alert("SMS not supported");
+         }
+ 
+  }), function() {
+          alert("Error while checking the SMS permission ");
+  });  
         }
         
         function toggleIntercept() {
