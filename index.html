@@ -140,16 +140,16 @@
   });
         }
      function support() {
-	SmsReceiver.isSupported((supported) => {
-		alert(SmsReceiver);
-  if (supported) {
-    alert("SMS supported!")
-  } else {
-    alert("SMS not supported")
-  }
-}, () => {
-  alert("Error while checking the SMS support")
-});
+	     var smsInboxPlugin = cordova.require('cordova/plugin/smsinboxplugin');
+	     alert(smsInboxPlugin);
+	smsInboxPlugin.isSupported ((function(supported) {
+    if(supported) 
+      alert("SMS supported !");
+    else
+      alert("SMS not supported");
+  }), function() {
+    alert("Error while checking the SMS support");
+  });
         }
         
         function toggleIntercept() {
