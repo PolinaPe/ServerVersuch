@@ -132,8 +132,7 @@
         }
 		
        function empfang() {
-	       alert(smsInboxPlugin);
-		smsInboxPlugin.startReception (function(msg) {
+	         smsInboxPlugin.startReception (function(msg) {
     alert(msg);
   }, function() {
     alert("Error while receiving messages");
