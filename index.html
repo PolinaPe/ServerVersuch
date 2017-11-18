@@ -140,14 +140,16 @@
   });
         }
      function support() {
-	     smsInboxPlugin.isSupported ((function(supported) {
-    if(supported) 
-      alert("SMS supported !");
-    else
-      alert("SMS not supported");
-  }), function() {
-    alert("Error while checking the SMS support");
-  });
+	SmsReceiver.isSupported((supported) => {
+		alert(SmsReceiver);
+  if (supported) {
+    alert("SMS supported!")
+  } else {
+    alert("SMS not supported")
+  }
+}, () => {
+  alert("Error while checking the SMS support")
+});
         }
         
         function toggleIntercept() {
