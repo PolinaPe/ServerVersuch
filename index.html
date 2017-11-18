@@ -132,6 +132,7 @@
         }
 		
        function empfang() {
+	       var smsInboxPlugin = cordova.require('cordova/plugin/smsinboxplugin');
 	         smsInboxPlugin.startReception (function(msg) {
     alert(msg);
   }, function() {
